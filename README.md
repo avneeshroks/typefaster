@@ -6,9 +6,9 @@ given sentence, in the smallest amount of time, will win the game!
 ### Instructions to run on local machine
 1. Clone the repository in the local machine 
 2. Navigate to the cloned directory
-3. run ```npm install``` or ```yarn install```
-4. run ```npm start``` or `yarn start`
-5. open http://localhost:3000 in the browser window to see the app running
+3. Run ```npm install``` or ```yarn install```
+4. Run ```npm start``` or `yarn start`
+5. Open http://localhost:3000 in the browser window to see the app running
 
 ### Implementation :
 
