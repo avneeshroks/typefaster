@@ -8,8 +8,8 @@ import Welcome from './Components/Welcome';
 
 function App() {
 
-  const [coundownRunning, setCountDownRunning] = useState();
   const [showWelcome, setShowWelcome] = useState(true);
+  const [coundownRunning, setCountDownRunning] = useState();
   const [gameRunning, setGameRunning] = useState();
   const [gameFinished, setGameFinished] = useState();
   const [startTime, setStartTime] = useState();
@@ -64,10 +64,6 @@ function App() {
     onGameStarted,
     onSubmitted,
   }
-
-  useEffect(() => {
-    setStartTime((new Date()).getTime());
-  }, []);
   
   const handleEnter = (e) => {
     if (e.key === 'Enter') {
