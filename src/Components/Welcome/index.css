@@ -1,0 +1,23 @@
+.result-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-area button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #cdcdcd;
+    background-color: seagreen;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    color: #fff;
+}
+
+.greet {
+    padding: 20px;
+    font-size: 2rem;
+}

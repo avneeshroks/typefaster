@@ -5,6 +5,11 @@ const Game = React.forwardRef((props, submitButtonRef) => {
 
     const [inputValue, setInputValue] = useState();
     const inputTextRef = useRef();
+    const { onGameStarted } = props;
+
+    useEffect(() => {
+        onGameStarted();
+    }, [onGameStarted])
 
     useEffect(() => {    
         submitButtonRef.current.disabled = true;
@@ -29,7 +34,7 @@ const Game = React.forwardRef((props, submitButtonRef) => {
                 {props.targetText}
             </div>
             <div className="input-area">
-                <textarea ref={inputTextRef} onInput={onInputChange} value={inputValue}/>
+                <textarea onPaste={(e)=>{return false}} ref={inputTextRef} onInput={onInputChange} value={inputValue}/>
             </div>
             <div className="button-area">
                 <button ref={submitButtonRef} onClick={props.onSubmitted}>Submit <span className="runner">🏃</span></button>
