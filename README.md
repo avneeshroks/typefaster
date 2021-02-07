@@ -24,7 +24,7 @@ given sentence, in the smallest amount of time, will win the game!
     * Input textarea - Allows user to start typing with focused as soon as renderd
     * Enter Keypress submits the game when the typed value is correct
     * Submit button - Enabled when the typed value is correct otherwise disabled
-  Winner Screen - Gets the previously randomly username from sessionStorage, shows the time in XXs XXXms
+  * Winner Screen - Gets the previously randomly username from sessionStorage, shows the time in XXs XXXms
 
 ### Currently the implementaion is only a UI side implementation - Couldn't get the time to imeplement Server side
 #### Jotting down some of the thought process though : :smile: 
