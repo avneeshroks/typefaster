@@ -67,9 +67,11 @@ function App() {
   
   const handleEnter = (e) => {
     if (e.key === 'Enter') {
-      submitButtonRef.current.click();
-      e.preventDefault();
-      return;
+      if(submitButtonRef.current) {
+        submitButtonRef.current.click();
+        e.preventDefault();
+        return;
+      }
     }
   }
 

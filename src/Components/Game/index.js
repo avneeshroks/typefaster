@@ -34,10 +34,22 @@ const Game = React.forwardRef((props, submitButtonRef) => {
                 {props.targetText}
             </div>
             <div className="input-area">
-                <textarea onPaste={(e)=>{return false}} ref={inputTextRef} onInput={onInputChange} value={inputValue}/>
+                <textarea
+                    onPaste={(e)=>{return false}}
+                    ref={inputTextRef}
+                    onInput={onInputChange}
+                    value={inputValue}
+                    placeholder="Start typing..."
+                />
             </div>
             <div className="button-area">
-                <button ref={submitButtonRef} onClick={props.onSubmitted}>Submit <span className="runner">🏃</span></button>
+                <button
+                    ref={submitButtonRef}
+                    onClick={props.onSubmitted}
+                >
+                    <span>Submit </span>
+                    <span className="runner">🏃</span>
+                </button>
             </div>
         </div>
     )
