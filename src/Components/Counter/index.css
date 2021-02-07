@@ -1,0 +1,7 @@
+.counter-container {
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 100px;
+}

@@ -1,0 +1,75 @@
+.game-container {
+    /* border: 1px solid #cdcdcd; */
+    height: 80vh;
+    /* box-shadow: 0px 0px 5px #cdcdcd; */
+    /* padding: 20px; */
+}
+
+.target-text {
+    min-height: 20vh;
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    font-weight: 600;
+    color: #545454;
+    font-size: 20px;
+}
+
+.input-area {
+    padding: 30px 0px;
+}
+
+.input-area textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-height: 28vh;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: monospace;
+    color: #545454;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-area button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #cdcdcd;
+    background-color: seagreen;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: pointer;
+    color: #fff;
+}
+.button-area .button-disabled {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #cdcdcd;
+    background-color: #ff473a;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: monospace;
+    cursor: not-allowed;
+    color: #fff;
+}
+
+.runner {
+    transform: scale(1, -1);
+    -moz-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    display: inline-block;
+}
