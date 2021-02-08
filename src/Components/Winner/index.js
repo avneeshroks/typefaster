@@ -17,10 +17,10 @@ const Winner = (props) => {
         <div className="result-container">
             <div className="winner-text">
                 <div>
-                    {`The winner is : ${sessionStorage.getItem('username')} 🥳`}
+                    {`The winner is : ${props.winnerName} 🥳`}
                 </div>
                 <div>
-                    {`Time : ${getFormmattedTime(props.endTime - props.startTime)}`}
+                    {`Time : ${getFormmattedTime(props.winnerTime)}`}
                 </div>
                 <div className="button-area">
                     <button
