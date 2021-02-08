@@ -4,11 +4,23 @@ The games will be played between 2 users. Who will be able to type correctly a
 given sentence, in the smallest amount of time, will win the game!
 
 ### Instructions to run on local machine
+
+#### Server Side : 
+1. Clone the typefaster-server https://github.com/avneeshroks/typefaster-server in local machine
+2. Navigate to cloned directory
+3. Run ```npm install``` or ```yarn install```
+4. Run ```npm start``` or `yarn start`
+5. Server should be running @ http://localhost:8080
+6. Leave it running
+
+#### Client Side : 
 1. Clone the repository in the local machine 
 2. Navigate to the cloned directory
 3. Run ```npm install``` or ```yarn install```
 4. Run ```npm start``` or `yarn start`
 5. Open http://localhost:3000 in the browser window to see the app running
+
+P.S : Make sure ports are correct.
 
 ### Implementation :
 
@@ -26,17 +38,12 @@ given sentence, in the smallest amount of time, will win the game!
     * Submit button - Enabled when the typed value is correct otherwise disabled
   * Winner Screen - Gets the previously randomly generated username from sessionStorage, shows the time in XXs XXXms
 
-### Currently the implementaion is only a UI side implementation - Couldn't get the time to imeplement Server side
-#### Jotting down some of the thought process though : :smile: 
+### Server side implementation using sockets :smile: 
 
-* Would use Node.js, Redis, Socket.io, Express.js
-* Had ideas to generate the users from backend
+* Havve used Node.js, Socket.io, Express.js
+* Client connecting and generating their usernames
 * Create Socket connections between client and server
-* Each game would be a pub/sub channel created on Redis - which connects two clients
-* Once both the clients are connected - start the game
-  * Server will publish the start event
-  * Client will run 3 second timer
-  * Client publishes Start time
-  * When either of the client finishes, record end time - client publishes end time
-  * Server publishes end-game-event, with winner's time
-  * Cient responds with unmounting Game and mounting Winner
+* Created channel logic where there coculd be only two users can be connected to make it multiplayer
+* Client gets registered to the game channel when they click on play, first user has to wait for the second one to join
+* Once next user joins the Countdown starts based on subscription from socket
+* As soon as any of the user finishes the time and username is broadcasted from the user to the connected client so that winner screen comes up
