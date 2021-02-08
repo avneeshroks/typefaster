@@ -6,7 +6,7 @@ given sentence, in the smallest amount of time, will win the game!
 ### Instructions to run on local machine
 
 #### Server Side : 
-1. Clone the typefaster-server https://github.com/avneeshroks/typefaster-server in local machine
+1. Clone the typefaster-server (https://github.com/avneeshroks/typefaster-server) in local machine
 2. Navigate to cloned directory
 3. Run ```npm install``` or ```yarn install```
 4. Run ```npm start``` or `yarn start`
@@ -14,7 +14,7 @@ given sentence, in the smallest amount of time, will win the game!
 6. Leave it running
 
 #### Client Side : 
-1. Clone the repository in the local machine 
+1. Clone this repository (https://github.com/avneeshroks/typefaster) in the local machine 
 2. Navigate to the cloned directory
 3. Run ```npm install``` or ```yarn install```
 4. Run ```npm start``` or `yarn start`
