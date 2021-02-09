@@ -9,7 +9,7 @@ given sentence, in the smallest amount of time, will win the game!
 1. Clone the typefaster-server (https://github.com/avneeshroks/typefaster-server) in local machine
 2. Navigate to cloned directory
 3. Run ```npm install``` or ```yarn install```
-4. Run ```npm start``` or `yarn start`
+4. Run ```node main.js```
 5. Server should be running @ http://localhost:8080
 6. Leave it running
 
