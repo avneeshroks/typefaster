@@ -4,6 +4,7 @@ import './index.css';
 const Game = React.forwardRef((props, submitButtonRef) => {
 
     const [inputValue, setInputValue] = useState();
+    const [buttonDisabled, setButtonDisabled] = useState(true);
     const inputTextRef = useRef();
     const { onGameStarted } = props;
 
@@ -20,10 +21,10 @@ const Game = React.forwardRef((props, submitButtonRef) => {
     const onInputChange = (e) => {
         setInputValue(e.target.value);
         if(e.target.value === props.targetText) {
-            submitButtonRef.current.disabled = false;
+            setButtonDisabled(false)
             submitButtonRef.current.classList.remove('button-disabled');
         } else {
-            submitButtonRef.current.disabled = true;
+            setButtonDisabled(true)
             submitButtonRef.current.classList.add('button-disabled');
         }
     }
@@ -45,6 +46,7 @@ const Game = React.forwardRef((props, submitButtonRef) => {
             <div className="button-area">
                 <button
                     ref={submitButtonRef}
+                    disabled={buttonDisabled}
                     onClick={props.onSubmitted}
                 >
                     <span>Submit </span>
