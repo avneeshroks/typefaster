@@ -40,7 +40,7 @@ P.S : Make sure ports are correct.
 
 ### Server side implementation using sockets :smile: 
 
-* Havve used Node.js, Socket.io, Express.js
+* Have used Node.js, Socket.io, Express.js
 * Client connecting and generating their usernames
 * Create Socket connections between client and server
 * Created channel logic where there coculd be only two users can be connected to make it multiplayer
